@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   philo_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkoyamba <mkoyamba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 18:09:06 by mkoyamba          #+#    #+#             */
-/*   Updated: 2022/04/01 18:17:41 by mkoyamba         ###   ########.fr       */
+/*   Created: 2022/04/01 18:14:33 by mkoyamba          #+#    #+#             */
+/*   Updated: 2022/04/01 18:14:50 by mkoyamba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int	main(int argc, char **argv)
+size_t	ft_strlen(char *str)
 {
-	if (argc != 5 && argc != 6)
-		error_out(ERROR_ARG);
+	size_t	n;
+
+	n = 0;
+	if (!str)
+		return (0);
+	while (str[n])
+		n++;
+	return (n);
+}
+
+void	error_out(char *str)
+{
+	write(2, str, ft_strlen(str));
+	exit(0);
 }

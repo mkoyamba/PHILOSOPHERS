@@ -6,7 +6,7 @@
 /*   By: mkoyamba <mkoyamba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 17:08:26 by mkoyamba          #+#    #+#             */
-/*   Updated: 2022/04/01 18:09:49 by mkoyamba         ###   ########.fr       */
+/*   Updated: 2022/04/01 18:16:46 by mkoyamba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@
 
 /*  		==================(      MACROS      )==================		  */
 
+# define ERROR_ARG "Il n'y a pas le bon nombre d'arguments"
+
 /*  		==================(    PROTOTYPES    )==================		  */
+
+size_t	ft_strlen(char *str);
+void	error_out(char *str);
 
 #endif
